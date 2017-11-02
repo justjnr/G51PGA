@@ -4,11 +4,17 @@
 long long calcPascNumResult(int a, int b, int c);
 int main(int argc, char **argv)
 {
+	if (argc == 1)
+	{
+		printf("Error: Enter value between 1 and 20\n");
+		return 1;
+	}
+	
 	int i,j,v,h, pascNum, rows, inputRows = strtol(argv[1], NULL, 10);
 	rows = inputRows;
 	v = rows - 1;
 
-	if (inputRows >= 1 && inputRows <= 20)
+	if (inputRows >= 1 && inputRows <= 20 && argc == 2)
 	{
 		for (i=1; i<=inputRows; i++)
 		{
@@ -18,7 +24,7 @@ int main(int argc, char **argv)
 				printf("%6lld   ",calcPascNumResult(v, h, pascNum));
 				h += 1;
 			}
-			printf("\n");
+			printf("\n%*s",(i*5), "");
 			h = 0;
 			v -= 1;
 			rows -= 1;
