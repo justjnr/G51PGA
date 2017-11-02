@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 				printf("%6lld   ",calcPascNumResult(v, h, pascNum));
 				h += 1;
 			}
-			printf("\n%*s",(i*5), "");
+			printf("\n");
 			h = 0;
 			v -= 1;
 			rows -= 1;
