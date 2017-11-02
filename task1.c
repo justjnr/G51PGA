@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 		printf("Error: Enter value between 1 and 20\n");
 		return 1;
 	}
-	
+
 	int i,j,v,h, pascNum, rows, inputRows = strtol(argv[1], NULL, 10);
 	rows = inputRows;
 	v = rows - 1;
@@ -21,10 +21,10 @@ int main(int argc, char **argv)
 			for (j=1; j<=rows; j++)
 			{
 				pascNum = v - h;
-				printf("%6lld   ",calcPascNumResult(v, h, pascNum));
+				printf("%6lld",calcPascNumResult(v, h, pascNum));
 				h += 1;
 			}
-			printf("\n%*s",(i*5), "");
+			printf("\n%*s",(i*3), "");
 			h = 0;
 			v -= 1;
 			rows -= 1;
