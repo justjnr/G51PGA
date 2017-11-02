@@ -28,7 +28,6 @@ int main(int argc, char **argv)
 			h = 0;
 			v -= 1;
 			rows -= 1;
-			//printf("%d\n", rows);
 		}
 	}
 	else
