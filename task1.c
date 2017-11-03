@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long calcPascNumResult(int a, int b, int c);
+int calcPascNumResult(int a, int b, int c);
 int main(int argc, char **argv)
 {
 	if (argc == 1)
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 			for (j=1; j<=rows; j++)
 			{
 				pascNum = v - h;
-				printf("%6ld",calcPascNumResult(v, h, pascNum));
+				printf("%6d",calcPascNumResult(v, h, pascNum));
 				h += 1;
 			}
 			printf("\n%*s",(i*3), "");
@@ -39,16 +39,16 @@ int main(int argc, char **argv)
 }
 long calcPascNum(int a)
 {
-	long factRow = 0;
+	long factRow = 7;
 
-	if(a <= 1)
+	/*if(a <= 1)
 	{
 		return 1;
 	}
-	factRow = a * calcPascNum(a - 1);
+	factRow = a * calcPascNum(a - 1);*/
 	return factRow;
 }
-long calcPascNumResult(int a, int b, int c)
+int calcPascNumResult(int a, int b, int c)
 {
 	return calcPascNum(a) / (calcPascNum(b) * calcPascNum(c));
 }
