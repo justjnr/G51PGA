@@ -35,6 +35,7 @@ int main(int argc, char **argv)
 		printf("Error: Enter value between 1 and 20\n");
 		return 1;
 	}
+	return 0;
 }
 long calcPascNum(int a)
 {
