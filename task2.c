@@ -34,7 +34,7 @@ int calcPrime(int a, int b)
 {
 	int i, isPrime;
 
-	int isPrime(int a)
+	/*int isPrime(int a)
 	{
 		double aa = a;
 		if (a == 1)
@@ -60,7 +60,7 @@ int calcPrime(int a, int b)
 	    }
 
     	return 1;
-	}
+	}*/
 
 	for (i = a; i <= b; i++)
 	{
