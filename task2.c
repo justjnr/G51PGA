@@ -94,7 +94,7 @@ int calcPrime(int a, int b)
 			isPrime = 0;
 		}*/
 
-		if (isPrime(i) == 1)
+		if (i == 1)
 		{
 			printf("%d\n", i);
 		}
