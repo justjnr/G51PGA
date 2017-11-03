@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int calcPrime(int a, int b);
+int calcPow(int a, int b);
 
 int main(int argc, char **argv)
 {
@@ -11,7 +13,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	int i,j, inputPrimeOne = strtol(argv[1], NULL, 10), inputPrimeTwo = strtol(argv[2], NULL, 10);
+	int inputPrimeOne = strtol(argv[1], NULL, 10), inputPrimeTwo = strtol(argv[2], NULL, 10);
 
 	if (inputPrimeOne >= 1 && inputPrimeTwo <= 1000000 && argc == 3)
 	{
@@ -32,7 +34,7 @@ int calcPrime(int a, int b)
 
 	for (i = a; i <= b; i++)
 	{
-		if (i <= 1)
+		/*if (i <= 1)
 		{
 			isPrime = 0;
 		}
@@ -50,12 +52,31 @@ int calcPrime(int a, int b)
 			{
 				isPrime = 0;
 			}
-		}
+		}*/
 		//isPrime = 1;
+
+		if ((calcPow(5, i - 1)) % i == 1)
+		{
+			isPrime = 1;
+		}
+		else
+		{
+			isPrime = 0;
+		}
 
 		if (isPrime == 1)
 		{
 			printf("%d\n", i);
 		}
 	}
+}
+int calcPow(int a, int b)
+{
+	int i, num = 1;
+
+	for (i = 0; i < b; i++)
+	{
+		num *= a;
+	}
+	return num;
 }
