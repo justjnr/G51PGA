@@ -62,12 +62,12 @@ int calcPrime(int a, int b)
 		else
 		{
 			isPrime = 0;
-		}
+		}*/
 
 		if (isPrime == 1)
 		{
 			printf("%d\n", i);
-		}*/
+		}
 	}
 }
 int calcPow(int a, int b)
