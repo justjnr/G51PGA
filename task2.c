@@ -55,7 +55,7 @@ int calcPrime(int a, int b)
 		}*/
 		//isPrime = 1;
 
-		if ((calcPow(5, i - 1)) % i == 1)
+		/*if ((calcPow(5, i - 1)) % i == 1)
 		{
 			isPrime = 1;
 		}
@@ -67,7 +67,7 @@ int calcPrime(int a, int b)
 		if (isPrime == 1)
 		{
 			printf("%d\n", i);
-		}
+		}*/
 	}
 }
 int calcPow(int a, int b)
