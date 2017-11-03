@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 int calcPascNumResult(int a, int b, int c);
+int caclPascNum(int a);
+
 int main(int argc, char **argv)
 {
 	if (argc == 1)
@@ -39,13 +41,13 @@ int main(int argc, char **argv)
 }
 long calcPascNum(int a)
 {
-	long factRow = 7;
+	long factRow = 0;
 
-	/*if(a <= 1)
+	if(a <= 1)
 	{
 		return 1;
 	}
-	factRow = a * calcPascNum(a - 1);*/
+	factRow = a * calcPascNum(a - 1);
 	return factRow;
 }
 int calcPascNumResult(int a, int b, int c)
