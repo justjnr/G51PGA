@@ -1,8 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-//#include <stdbool.h>
-
 
 int calcPrime(int a, int b);
 
@@ -42,7 +39,7 @@ int calcPrime(int a, int b)
 	for (i = a; i <= b; i++)
 	{
 		isPrime = 0;
-		for (j = 2; j <= i/2; j++)
+		for (j = 2; j <= i / 2; j++)
 		{
 			if (i % j == 0)
 			{
