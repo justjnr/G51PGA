@@ -13,9 +13,14 @@ int main(int argc, char **argv)
 		printf("Error: Enter two parameters\n");
 		return 1;
 	}
+	char *nd;
+	int inputPrimeOne = strtol(argv[1], &nd, 10), inputPrimeTwo = strtol(argv[2], &nd, 10);
 
-	int inputPrimeOne = strtol(argv[1], NULL, 10), inputPrimeTwo = strtol(argv[2], NULL, 10);
-
+	if (*nd != '\0')
+	{
+		printf("Error: Enter two positive values between 2 and 1000000\n");
+		return 1;
+	}
 	if (inputPrimeOne >= 2 && inputPrimeTwo <= 1000000 && argc == 3)
 	{
 		//for (i = inputPrimeOne; i <= inputPrimeTwo; i++)
