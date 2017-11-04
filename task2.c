@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 		printf("Error: Enter two parameters\n");
 		return 1;
 	}
+
 	char *nd;
 	int inputPrimeOne = strtol(argv[1], &nd, 10), inputPrimeTwo = strtol(argv[2], &nd, 10);
 
@@ -20,11 +21,7 @@ int main(int argc, char **argv)
 	}
 	if (inputPrimeOne >= 2 && inputPrimeTwo <= 1000000 && argc == 3)
 	{
-		//for (i = inputPrimeOne; i <= inputPrimeTwo; i++)
-		//{
-			//printf("%d\n", calcPrime(inputPrimeOne, inputPrimeTwo));
-			calcPrime(inputPrimeOne, inputPrimeTwo);
-		//}
+		calcPrime(inputPrimeOne, inputPrimeTwo);
 	}
 	else
 	{
