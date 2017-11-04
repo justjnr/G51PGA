@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 }
 int calcPrime(int a, int b)
 {
-	int i, isPrime;
+	int i, j, isPrime;
 
 	/*int isPrime(int a)
 	{
@@ -64,6 +64,23 @@ int calcPrime(int a, int b)
 
 	for (i = a; i <= b; i++)
 	{
+		isPrime = 0;
+		for (j = 2; j <= i/2; j++)
+		{
+			if (i % j == 0)
+			{
+				isPrime = 1;
+				break;
+			}
+		}
+		if (isPrime == 0 && b!= 1)
+		{
+			printf("%d\n", i);
+		}
+	}
+
+	for (i = a; i <= b; i++)
+	{
 		/*if (i <= 1)
 		{
 			isPrime = 0;
@@ -92,12 +109,12 @@ int calcPrime(int a, int b)
 		else
 		{
 			isPrime = 0;
-		}*/
+		}
 
 		if (i == 1)
 		{
 			printf("%d\n", i);
-		}
+		}*/
 	}
 }
 int calcPow(int a, int b)
