@@ -20,7 +20,8 @@ int main(int argc, char **argv)
 	{
 		//for (i = inputPrimeOne; i <= inputPrimeTwo; i++)
 		//{
-			printf("%d\n", calcPrime(inputPrimeOne, inputPrimeTwo));
+			//printf("%d\n", calcPrime(inputPrimeOne, inputPrimeTwo));
+			calcPrime(inputPrimeOne, inputPrimeTwo);
 		//}
 	}
 	else
