@@ -17,7 +17,7 @@ int main(int argc, char **argv)
 		printf("Error: Enter three parameters\n");
 		return 1;
 	}
-	if (inputCell >= 0 && inputGen >= 1 && inputRuleSet >= 0 && inputRuleSet <= 255 && argc == 4)
+	if (inputCell >= 1 && inputGen >= 1 && inputRuleSet >= 0 && inputRuleSet <= 255 && argc == 4)
 	{
 		printf("Acceptable\n");
 		return 0;
