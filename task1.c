@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 }
 long calcPascNum(int a)
 {
-	long factRow = 0;
+	//long factRow = 0;
 
 	if(a <= 1)
 	{
@@ -49,7 +49,7 @@ long calcPascNum(int a)
 	}
 	else
 	{
-		return factRow = a * calcPascNum(a - 1);
+		return (a * calcPascNum(a - 1));
 	}
 	//return factRow;
 }
