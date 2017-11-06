@@ -41,16 +41,22 @@ int main(int argc, char **argv)
 }
 long calcPascNum(int a)
 {
-	//long factRow = 0;
+	int i;
+	long factRow = 1;
 
-	if(a <= 1)
+	/*if(a <= 1)
 	{
 		return 1;
 	}
 	else
 	{
 		return (a * calcPascNum(a - 1));
+	}*/
+	for (i = 1; i <= a; i++)
+	{
+		factRow = factRow * i;
 	}
+	return factRow;
 	//return factRow;
 }
 int calcPascNumResult(int a, int b, int c)
