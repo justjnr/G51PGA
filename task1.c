@@ -19,6 +19,7 @@ int main(int argc, char **argv)
 	{
 		for (i=1; i<=inputRows; i++)
 		{
+			h = 0;
 			for (j=1; j<=rows; j++)
 			{
 				pascNum = v - h;
@@ -26,7 +27,6 @@ int main(int argc, char **argv)
 				h += 1;
 			}
 			printf("\n%*s",(i*3), "");
-			h = 0;
 			v -= 1;
 			rows -= 1;
 		}
