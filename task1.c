@@ -57,7 +57,6 @@ long calcPascNum(int a)
 		factRow = factRow * i;
 	}
 	return factRow;
-	//return factRow;
 }
 int calcPascNumResult(int a, int b, int c)
 {
