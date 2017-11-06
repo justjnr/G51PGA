@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 int calcPascNumResult(int a, int b, int c);
-long caclPascNum(int a);
 
 int main(int argc, char **argv)
 {
