@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int calcPascNumResult(int a, int b, int c);
-int caclPascNum(int a);
+long caclPascNum(int a);
 
 int main(int argc, char **argv)
 {
@@ -47,8 +47,11 @@ long calcPascNum(int a)
 	{
 		return 1;
 	}
-	factRow = a * calcPascNum(a - 1);
-	return factRow;
+	else
+	{
+		return factRow = a * calcPascNum(a - 1);
+	}
+	//return factRow;
 }
 int calcPascNumResult(int a, int b, int c)
 {
