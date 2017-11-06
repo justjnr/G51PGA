@@ -59,5 +59,13 @@ long calcPascNum(int a)
 }
 int calcPascNumResult(int a, int b, int c)
 {
-	return calcPascNum(a) / (calcPascNum(b) * calcPascNum(c));
+	if ((calcPascNum(b) * calcPascNum(c)) == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return calcPascNum(a) / (calcPascNum(b) * calcPascNum(c));
+	}
+	
 }
