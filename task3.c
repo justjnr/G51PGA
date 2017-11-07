@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 	}
 
 	char *nd;
-	int inputCell = strtol(argv[1], &nd, 10), inputGen = strtol(argv[2], &nd, 10), inputRuleSet = strtol(argv[3], &nd, 10);
+	int i, j, inputCell = strtol(argv[1], &nd, 10), inputGen = strtol(argv[2], &nd, 10), inputRuleSet = strtol(argv[3], &nd, 10);
 
 	if (*nd != '\0')
 	{
@@ -19,7 +19,14 @@ int main(int argc, char **argv)
 	}
 	if (inputCell >= 1 && inputGen >= 1 && inputRuleSet >= 0 && inputRuleSet <= 255 && argc == 4)
 	{
-		printf("Acceptable\n");
+		for (i = 1; i <= inputGen; i++)
+		{
+			for (j = 1; j <= inputCell; j++)
+			{
+				printf("*");
+			}
+			printf("\n");
+		}
 		return 0;
 	}
 	else
