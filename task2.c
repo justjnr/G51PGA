@@ -29,28 +29,6 @@ int main(int argc, char **argv)
 		return 1;
 	}
 }
-/*int calcPrime(int a, int b)
-{
-	int i, j, isPrime;
-
-	for (i = a; i <= b; i++)
-	{
-		isPrime = 0;
-		for (j = 2; j <= i / 2; j++)
-		{
-			if (i % j == 0)
-			{
-				isPrime = 1;
-				break;
-			}
-		}
-		if (isPrime == 0 && b!= 1)
-		{
-			printf("%d\n", i);
-		}
-	}
-	return 0;
-}*/
 void calcPrime(int a, int b)
 {
 	int k, prime[b + 1];

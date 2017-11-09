@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	{
 		if (inputRuleSet == 0)
 	    {
-	    	inputRuleSet = 64;
+	    	inputRuleSet = 8;
 	    }
 		// Convert to binary
 		while (inputRuleSet >= 1)
