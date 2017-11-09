@@ -72,10 +72,14 @@ int main(int argc, char **argv)
 				newstate = calcRules(left, current, right, binArray);
 				nextCells[j] = newstate;
 				//char * charArray = binToChar(inputCell, cells, nextCells)
-				if(cells[j]==1)
+				if(cells[j] == 1)
+				{
 					printf("*");
+				}
 				else
+				{
 					printf(" ");
+				}
 				//printf("%d", cells[j]);
 				//printf("%d ", cells[j]);
 			}
