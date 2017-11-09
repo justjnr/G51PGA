@@ -53,24 +53,24 @@ int main(int argc, char **argv)
 }*/
 void calcPrime(int a, int b)
 {
-	int prime[(b-a)+ 1];
+	int k, prime[b + 1];
 	memset(prime, 0, sizeof(prime));
 
-	for (int i = a; i * i <= (b-a); i++)
+	for (int i = 2; i*i <= b; i++)
 	{
 		if (prime[i] == 0)
 		{
-			for (int j = i * 2; j <= (b-a); j += i)
+			for (int j = i * 2; j <= b; j += i)
 			{
 				prime[j] = 1;
 			}
 		}
 	}
-	for (int i = a; i <= (b-a); i++)
+	for (k = a; k <= b; k++)
 	{
-		if (prime[i] == 0)
+		if (prime[k] == 0)
 		{
-			printf("%d\n", i);
+			printf("%d\n", k);
 		}
 	}
 }
