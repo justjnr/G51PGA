@@ -40,7 +40,6 @@ int main(int argc, char **argv)
 	    }
 	    //printf("%08d\n", b);
         int * binArray = binToArray(b);
-        //binArrayRev[7] = binArray[0], binArrayRev[6] = binArray[1], binArrayRev[5] = binArray[2], binArrayRev[4] = binArray[3], binArrayRev[3] = binArray[4], binArrayRev[2] = binArray[5], binArrayRev[1] = binArray[6], binArrayRev[0] = binArray[7];
     	//printf("Binary[%d, %d, %d, %d, %d, %d, %d, %d]\n", binArray[0], binArray[1], binArray[2], binArray[3], binArray[4], binArray[5], binArray[6], binArray[7]);
     	// Set initial row
 		middleCell = inputCell / 2;
@@ -94,9 +93,10 @@ int main(int argc, char **argv)
 int * binToArray(int a)
 {
 	int i, n = log10(a) + 1, *binArray = calloc(n, sizeof(int[8]));
-	for (i = 0; i < n; ++i, a /= 10)
+	for (i = 0; i < n; ++i)
 	{
 		binArray[i] = a % 10;
+		a = a / 10;
 	}
 	return binArray;
 }
