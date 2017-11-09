@@ -2,8 +2,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-void calcPrime(int a, int b);
+void calcPrime(int a, int b)
+{
+	int prime[b + 1];
+	memset(prime, 0, sizeof(prime));
 
+	for (int i = 2; i*i <= b; i++)
+	{
+		if (prime[i] == 0)
+		{
+			for (int j = i * 2; j <= b; j += i)
+			{
+				prime[j] = 1;
+			}
+		}
+	}
+	for (int k = a; k <= b; k++)
+	{
+		if (prime[k] == 0)
+		{
+			printf("%d\n", k);
+		}
+	}
+}
 int main(int argc, char **argv)
 {
 	if (argc == 1 || argc == 2)
@@ -27,28 +48,5 @@ int main(int argc, char **argv)
 	{
 		printf("Error: Enter two positive values between 2 and 1000000\n");
 		return 1;
-	}
-}
-void calcPrime(int a, int b)
-{
-	int prime[b + 1];
-	memset(prime, 0, sizeof(prime));
-
-	for (int i = 2; i*i <= b; i++)
-	{
-		if (prime[i] == 0)
-		{
-			for (int j = i * 2; j <= b; j += i)
-			{
-				prime[j] = 1;
-			}
-		}
-	}
-	for (int k = a; k <= b; k++)
-	{
-		if (prime[k] == 0)
-		{
-			printf("%d\n", k);
-		}
 	}
 }
