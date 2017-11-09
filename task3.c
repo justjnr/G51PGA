@@ -47,7 +47,6 @@ int main(int argc, char **argv)
     	//printf("Binary[%d, %d, %d, %d, %d, %d, %d, %d]\n", binArray[0], binArray[1], binArray[2], binArray[3], binArray[4], binArray[5], binArray[6], binArray[7]);
     	// Set initial row
 		middleCell = inputCell / 2;
-		//cells[middleCell] = '*';
 		cells[middleCell] = 1;
     	// For each row
 		for (i = 0; i < inputGen; i++)
@@ -81,7 +80,6 @@ int main(int argc, char **argv)
 					printf(" ");
 				}
 				//printf("%d", cells[j]);
-				//printf("%d ", cells[j]);
 			}
 			memcpy(cells, nextCells, sizeof(cells));
 			printf("\n");
