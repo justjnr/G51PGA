@@ -31,10 +31,10 @@ int main(int argc, char **argv)
 }
 void calcPrime(int a, int b)
 {
-	int k, prime[b + 1];
+	int i, k, prime[b + 1];
 	memset(prime, 0, sizeof(prime));
 
-	for (int i = 2; i*i <= b; i++)
+	for (i = 2; i*i <= b; i++)
 	{
 		if (prime[i] == 0)
 		{
