@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int calcPrime(int a, int b);
+void calcPrime(int a, int b);
 
 int main(int argc, char **argv)
 {
@@ -10,7 +11,6 @@ int main(int argc, char **argv)
 		printf("Error: Enter two parameters\n");
 		return 1;
 	}
-
 	char *nd;
 	int inputPrimeOne = strtol(argv[1], &nd, 10), inputPrimeTwo = strtol(argv[2], &nd, 10);
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 }
-int calcPrime(int a, int b)
+/*int calcPrime(int a, int b)
 {
 	int i, j, isPrime;
 
@@ -50,4 +50,27 @@ int calcPrime(int a, int b)
 		}
 	}
 	return 0;
+}*/
+void calcPrime(int a, int b)
+{
+	int prime[(b-a)+ 1];
+	memset(prime, 0, sizeof(prime));
+
+	for (int i = a; i * i <= (b-a); i++)
+	{
+		if (prime[i] == 0)
+		{
+			for (int j = i * 2; j <= (b-a); j += i)
+			{
+				prime[j] = 1;
+			}
+		}
+	}
+	for (int i = a; i <= (b-a); i++)
+	{
+		if (prime[i] == 0)
+		{
+			printf("%d\n", i);
+		}
+	}
 }
