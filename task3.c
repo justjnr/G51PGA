@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	int r, b = 0, ba = 1;
 	int middleCell;
 	int cells[inputCell], nextCells[inputCell];
-	int left, current, right, newstate;
+	int left, current, right, nextState;
 	memset(cells, 0, sizeof(cells));
 	memset(nextCells, 0, sizeof(nextCells));
 
@@ -30,6 +30,10 @@ int main(int argc, char **argv)
 	}
 	if (inputCell >= 1 && inputGen >= 1 && inputRuleSet >= 0 && inputRuleSet <= 255 && argc == 4)
 	{
+		if (inputRuleSet == 0)
+	    {
+	    	inputRuleSet = 64;
+	    }
 		// Convert to binary
 		while (inputRuleSet >= 1)
 	    {
@@ -55,22 +59,18 @@ int main(int argc, char **argv)
 				//printf("Cell[%d] = %c ", j, cells[j]);
 				//printf("%c ", newCells[k]);
 				left = cells[j-1];
-				//if (cells[j] == cells[0])
 				if (j == 0)
 				{
 					left = cells[inputCell - 1];
 				}
 				right = cells[j+1];
-				//if (cells[j] == cells[inputGen - 1])
 				if (j == (inputCell - 1))
 				{
 					right = cells[0];
 				}
-				
 				current = cells[j];
-				
-				newstate = calcRules(left, current, right, binArray);
-				nextCells[j] = newstate;
+				nextState = calcRules(left, current, right, binArray);
+				nextCells[j] = nextState;
 				//char * charArray = binToChar(inputCell, cells, nextCells)
 				if(cells[j] == 1)
 				{
