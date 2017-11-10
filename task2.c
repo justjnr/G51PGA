@@ -2,29 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void calcPrime(int a, int b)
-{
-	int prime[b + 1];
-	memset(prime, 0, sizeof(prime));
-
-	for (int i = 2; i*i <= b; i++)
-	{
-		if (prime[i] == 0)
-		{
-			for (int j = i * 2; j <= b; j += i)
-			{
-				prime[j] = 1;
-			}
-		}
-	}
-	for (int k = a; k <= b; k++)
-	{
-		if (prime[k] == 0)
-		{
-			printf("%d\n", k);
-		}
-	}
-}
 int main(int argc, char **argv)
 {
 	if (argc == 1 || argc == 2)
@@ -42,7 +19,26 @@ int main(int argc, char **argv)
 	}
 	if (inputPrimeOne >= 2 && inputPrimeTwo <= 1000000 && argc == 3)
 	{
-		calcPrime(inputPrimeOne, inputPrimeTwo);
+		int prime[inputPrimeTwo + 1];
+		memset(prime, 0, sizeof(prime));
+
+		for (int i = 2; i*i <= inputPrimeTwo; i++)
+		{
+			if (prime[i] == 0)
+			{
+				for (int j = i * 2; j <= inputPrimeTwo; j += i)
+				{
+					prime[j] = 1;
+				}
+			}
+		}
+		for (int k = inputPrimeOne; k <= inputPrimeTwo; k++)
+		{
+			if (prime[k] == 0)
+			{
+				printf("%d\n", k);
+			}
+		}
 	}
 	else
 	{
