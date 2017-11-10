@@ -3,7 +3,7 @@
 #include <math.h>
 #include <string.h>
 
-int * binToArray(int a);
+int* binToArray(int a);
 int calcRules(int a, int b, int c, int binArray[]);
 
 int main(int argc, char **argv)
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	        ba = ba * 10;
 	    }
 	    //printf("%08d\n", b);
-        int * binArray = binToArray(b);
+        int* binArray = binToArray(b);
     	//printf("Binary[%d, %d, %d, %d, %d, %d, %d, %d]\n", binArray[0], binArray[1], binArray[2], binArray[3], binArray[4], binArray[5], binArray[6], binArray[7]);
     	// Set initial row
 		middleCell = inputCell / 2;
@@ -92,7 +92,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 }
-int * binToArray(int a)
+int* binToArray(int a)
 {
 	int i, n = log10(a) + 1, *binArray = calloc(n, sizeof(int[8]));
 	for (i = 0; i < n; ++i)
