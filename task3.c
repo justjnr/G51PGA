@@ -95,7 +95,7 @@ int main(int argc, char **argv)
 int* binToArray(int a)
 {
 	int i, n = 8, *binArray = calloc(n, sizeof(int[8]));
-	for (i = 0; i < 8; ++i)
+	for (i = 0; i < n; ++i)
 	{
 		binArray[i] = a % 10;
 		a = a / 10;
