@@ -1,38 +1,9 @@
-<<<<<<< HEAD
-# G51PGA 2017 Coursework 2
+# G51PGA
+Programming &amp; Algorithms Module Coursework
 
 ## Introduction
 
-This coursework focuses on writing three interesting programs using loops, arrays and pointers. There are three tasks to complete, details of which are given below. You should complete **all three** tasks. Links to external pages are provided in the details below which you will need to follow and read to complete each task.
-
-## Assessment
-
-This coursework is worth **15%** of your final course grade. The points awarded for each task are as follows:
-
-|            | Compilation | Implementation | Execution | **Total** |
-| ---------- | :---------: | :------------: | :-------: | :-------: |
-| **Task 1** | 2           | 1              | 2         | **5**     |
-| **Task 2** | 2           | 1              | 5         | **8**     |
-| **Task 3** | 2           | 1              | 2         | **5**     |
-
-
-For **Task 1**, you are awarded *two* points if your program compiles correctly: *one* point if it compiles without errors, and a further *one* point if it compiles without errors *and* warnings. If your program follows the implementation instructions given in [Task 1 Details](#details) below, you are awarded *one* point. If your program produces the correct output as described in [Task 1 Details](#details) below, you are awarded *one* point. If your program handles invalid input correctly as described in [Task 1 Details](#details) below, you are awarded *one* point.
-
-For **Task 2**, you are awarded *two* points if your program compiles correctly: *one* point if it compiles without errors, and a further *one* point if it compiles without errors *and* warnings. If your program follows the implementation instructions given in [Task 2 Details](#details-1) below, you are awarded *one* points. If your program produces the correct output as described in [Task 2 Details](#details-1) below, you are awarded *one* point. If your program handles invalid input correctly as described in [Task 2 Details](#details-1) below, you are awarded *one* point. Points will also be awarded based on the execution time of your program if both the previous execution tests are passed. The *10* programs with the fastest execution times will be awarded 3 points, the next *20* programs with the fastest execution times will be awarded 2 points, and the next *80* programs with the fastest execution times will be awarded 1 point.
-
-For **Task 3**, you are awarded *two* points if your program compiles correctly: *one* point if it compiles without errors, and a further *one* point if it compiles without errors *and* warnings. If your program follows the implementation instructions given in [Task 3 Details](#details-2) below, you are awarded *one* point. If your program produces the correct output as described in [Task 3 Details](#details-2) below, you are awarded *one* point. If your program handles invalid input correctly as described in [Task 3 Details](#details-2) below, you are awarded *one* point.
-
-The contribution towards your final course grade is calculated as follows:
-
-```maths
-	floor(15 * (task1_points_awarded + task2_points_awarded + task3_points_awarded) / 18)
-```
-
-Your provisional score for each task can be viewed on GitLab after every push to `projects.cs.nott.ac.uk.`. Your final score will be based on the code in the last commit pushed to `projects.cs.nott.ac.uk.` *before* the coursework deadline. Commits pushed after the coursework deadline will be disregarded. After the coursework deadline, your code will undergo further review and, based on this review, your provisional score may go up or down. This further review will include checks for code plagiarism and for trivial implementations e.g. implementations just containing an empty main function or clearly not written following the task guidelines. Final scores will be published on the G51PGA moodle pages around a week after the coursework deadline.
-
-Points for *execution times* in **Task 2** are calculated outside of the GitLab build pipeline and will be made available separately. More details on how to view your execution time points will be given in lectures.
-
-Your repository contains a file called `.gitlab-ci.yml`. This file is used during the assessment process and *must not* be removed or edited in any way. Any tampering with this file will result in a score of zero for this coursework.
+This coursework focuses on writing three interesting programs using loops, arrays and pointers. There are three tasks to complete, details of which are given below.
 
 ## Task 1
 
@@ -204,21 +175,3 @@ You could store the states of cells in the current and next generations in two a
 The main computation in your program could be performed by two nested loops. The outer loop would iterate over each generation. For each generation, an inner loop would iterate over all the cells in the current generation array. Based on the state in the current generation of each cell and its two neighbours, you can calculate the state in the next generation and store this in the next generation array. After calculating the next generation states for all cells in the current generation, you can then print out the next generation. Finally you can copy the next generation array to the current generation array, and perform the whole procedure again for the next generation.
 
 To calculate the state of a cell in the next generation from it and its neighbours current state, you can use some simple binary manipulation. For example, say you were using the ruleset with Wolfram code 110 and you wanted to calculate the state in the next generation of a dead cell with two live neighbours i.e. `101`. First, treat `101` as a binary number and convert it to decimal i.e. `5`. Now right shift the rule number i.e. `101` by `5` and look at the value of the least significant bit i.e. `1`. This is the state of the cell in the next generation.  A complete set of pictures for each Wolfram code is given [here](http://mathworld.wolfram.com/ElementaryCellularAutomaton.html). [Rule 90](https://en.wikipedia.org/wiki/Rule_90) and [Rule 110](https://en.wikipedia.org/wiki/Rule_110) are particular interesting.
-
-### Extensions
-
-A number of possible extensions to this task are discussed below. **No additional points** are given for implementing these extensions, but they are interesting to explore, and you should try to implement some of these if you have time and have completed all of the tasks above. I would be very interested to see and discuss your implementations in Lab sessions.
-
-Do *not* implement any of these extensions in `task3.c` (otherwise the build pipeline may decrease your score for this task). Instead, create a *new source file* in your repository. I would suggest naming this file e.g. `task3extended.c`.
-
-One obvious extension is to improve the graphical output. You could use OpenGL to do this (see e.g. [An Introduction on OpenGL with 2D Graphics](http://www3.ntu.edu.sg/home/ehchua/programming/opengl/cg_introduction.html)), although there are a number of other C graphics libraries which could work. Plotting rather than printing the output will allow you to explore a much larger grid and more easily view interesting behaviour.
-
-Another extension is to allow different configurations for the initial state of the cellular automata. You might start from a random initial state, or allow the user to specify the initial state in a file. Starting from a random state is interesting since it helps you see how the cellular automata transitions from a disordered to ordered state. When starting from a random state, it is often useful to allow the user to specify a random seed, so that any interesting random initial states can be reproduced at a later time by entering the same random seed.
-
-You can also increase the number of possible states a cell can have (and colour your output based on state), and the size of the cell neighbourhood, so that e.g. the *two* cells of the left of a cell and the *two* cells on the right influence the state of a cell. Overlaying two elementary cellular automata can also produce interesting results.
-
-If you really like cellular automata, then have a look at John Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), the most famous 2D cellular automaton. Implementing and exploring this cellular automaton is lots of fun, see [this video](https://www.youtube.com/watch?v=C2vgICfQawE) for some examples of what is possible in the Game of Life. More implementation details can be found in Section 7.6 of [this chapter](http://natureofcode.com/book/chapter-7-cellular-automata/).
-=======
-# G51PGA
-Programming &amp; Algorithms Module Coursework
->>>>>>> 1cc4c4c4c1bd2ad3f6f51c956637f4d979ca47bb
