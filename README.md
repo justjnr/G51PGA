@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # G51PGA 2017 Coursework 2
 
 ## Introduction
@@ -217,3 +218,7 @@ Another extension is to allow different configurations for the initial state of 
 You can also increase the number of possible states a cell can have (and colour your output based on state), and the size of the cell neighbourhood, so that e.g. the *two* cells of the left of a cell and the *two* cells on the right influence the state of a cell. Overlaying two elementary cellular automata can also produce interesting results.
 
 If you really like cellular automata, then have a look at John Conway's [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life), the most famous 2D cellular automaton. Implementing and exploring this cellular automaton is lots of fun, see [this video](https://www.youtube.com/watch?v=C2vgICfQawE) for some examples of what is possible in the Game of Life. More implementation details can be found in Section 7.6 of [this chapter](http://natureofcode.com/book/chapter-7-cellular-automata/).
+=======
+# G51PGA
+Programming &amp; Algorithms Module Coursework
+>>>>>>> 1cc4c4c4c1bd2ad3f6f51c956637f4d979ca47bb
